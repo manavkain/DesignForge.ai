@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DesignForge AI — Transform AI-Generated HTML Into Design Masterpieces</title>
+    <meta name="description" content="The world's most powerful AI-driven HTML redesign platform. Upload basic HTML, share visual references, describe your vision — get stunning, production-ready websites.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+    <!-- ============ NAVBAR ============ -->
+    <nav id="navbar" class="navbar">
+        <div class="navbar-inner">
+            <a href="#" class="navbar-brand">
+                <span class="brand-icon">⚡</span>
+                <span class="brand-text">DesignForge<span class="brand-accent">AI</span></span>
+            </a>
+            <div class="navbar-links">
+                <a href="#input-zone" class="nav-link">Create</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <button id="api-key-btn" class="nav-btn glass-btn" onclick="openApiKeyModal()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m21 2-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0 3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+                    <span>API Key</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============ HERO ============ -->
+    <section id="hero" class="hero">
+        <div class="hero-bg">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+            <div class="grid-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span>AI-Powered Design Engine</span>
+            </div>
+            <h1 class="hero-title">
+                Transform <span class="gradient-text">AI-Generated HTML</span><br>
+                Into Design Masterpieces
+            </h1>
+            <p class="hero-subtitle">
+                Upload your basic HTML, share visual references, describe your vision, pick a style — 
+                and watch as AI redesigns it into a world-class website that surpasses decades of traditional design expertise.
+            </p>
+            <div class="hero-cta-group">
+                <a href="#input-zone" class="btn btn-primary btn-lg">
+                    <span>Start Transforming</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="#how-it-works" class="btn btn-ghost btn-lg">See How It Works</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-count="12">12</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Design Themes</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">4</span>
+                    <span class="stat-label">Input Modes</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">$0</span>
+                    <span class="stat-label">Free to Use</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section id="how-it-works" class="section how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">How It Works</span>
+                <h2 class="section-title">Four Inputs. One <span class="gradient-text">Masterpiece.</span></h2>
+                <p class="section-subtitle">Combine any or all of these inputs — our AI synthesizes them into a cohesive, stunning design.</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card glass-card" data-step="01">
+                    <div class="step-icon">📄</div>
+                    <h3>Upload HTML</h3>
+                    <p>Paste or upload your existing AI-generated HTML. We'll analyze its structure and content.</p>
+                    <span class="step-tag">Optional</span>
+                </div>
+                <div class="step-card glass-card" data-step="02">
+                    <div class="step-icon">🖼️</div>
+                    <h3>Share References</h3>
+                    <p>Upload design screenshots or inspiration images. AI extracts colors, layout patterns, and mood.</p>
+                    <span class="step-tag">Optional</span>
+                </div>
+                <div class="step-card glass-card" data-step="03">
+                    <div class="step-icon">✍️</div>
+                    <h3>Describe Vision</h3>
+                    <p>Tell us what you want. Industry, audience, vibe, specific features — the more detail, the better.</p>
+                    <span class="step-tag">Recommended</span>
+                </div>
+                <div class="step-card glass-card" data-step="04">
+                    <div class="step-icon">🎨</div>
+                    <h3>Pick a Theme</h3>
+                    <p>Choose from 12+ curated design systems. Each encodes deep aesthetic expertise and modern patterns.</p>
+                    <span class="step-tag">Required</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ INPUT ZONE ============ -->
+    <section id="input-zone" class="section input-zone">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Create</span>
+                <h2 class="section-title">Build Your <span class="gradient-text">Design Brief</span></h2>
+            </div>
+
+            <div class="input-grid">
+                <!-- HTML Input -->
+                <div class="input-panel glass-card" id="html-input-panel">
+                    <div class="panel-header">
+                        <div class="panel-icon">📄</div>
+                        <div>
+                            <h3>HTML Source</h3>
+                            <p class="panel-hint">Upload file or paste code</p>
+                        </div>
+                        <span class="optional-badge">Optional</span>
+                    </div>
+                    <div class="panel-body">
+                        <div id="html-drop-zone" class="drop-zone" ondrop="handleHtmlDrop(event)" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)">
+                            <div class="drop-zone-content">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                                <p>Drag & drop <strong>.html</strong> file here</p>
+                                <span class="drop-zone-or">or</span>
+                                <button class="btn btn-sm btn-outline" onclick="document.getElementById('html-file-input').click()">Browse Files</button>
+                                <input type="file" id="html-file-input" accept=".html,.htm" hidden onchange="handleHtmlFile(event)">
+                            </div>
+                        </div>
+                        <div id="html-file-info" class="file-info hidden">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                            <span id="html-file-name"></span>
+                            <span id="html-file-size"></span>
+                            <button class="btn-icon" onclick="clearHtmlInput()" title="Remove">✕</button>
+                        </div>
+                        <div class="toggle-row">
+                            <button id="toggle-paste-btn" class="btn btn-sm btn-ghost" onclick="toggleHtmlPaste()">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                                Paste HTML instead
+                            </button>
+                        </div>
+                        <textarea id="html-paste-area" class="code-textarea hidden" placeholder="<!-- Paste your HTML code here -->" spellcheck="false"></textarea>
+                    </div>
+                </div>
+
+                <!-- Image References -->
+                <div class="input-panel glass-card" id="image-input-panel">
+                    <div class="panel-header">
+                        <div class="panel-icon">🖼️</div>
+                        <div>
+                            <h3>Image References</h3>
+                            <p class="panel-hint">Upload inspiration images (max 5)</p>
+                        </div>
+                        <span class="optional-badge">Optional</span>
+                    </div>
+                    <div class="panel-body">
+                        <div id="image-drop-zone" class="drop-zone" ondrop="handleImageDrop(event)" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)">
+                            <div class="drop-zone-content">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                                <p>Drop images here</p>
+                                <span class="drop-zone-or">or</span>
+                                <button class="btn btn-sm btn-outline" onclick="document.getElementById('image-file-input').click()">Browse Images</button>
+                                <input type="file" id="image-file-input" accept="image/png,image/jpeg,image/webp" multiple hidden onchange="handleImageFiles(event)">
+                            </div>
+                        </div>
+                        <div id="image-preview-grid" class="image-preview-grid"></div>
+                    </div>
+                </div>
+
+                <!-- Text Context -->
+                <div class="input-panel glass-card full-width" id="text-input-panel">
+                    <div class="panel-header">
+                        <div class="panel-icon">✍️</div>
+                        <div>
+                            <h3>Text Context</h3>
+                            <p class="panel-hint">Describe what you want the design to look like</p>
+                        </div>
+                        <span class="recommended-badge">Recommended</span>
+                    </div>
+                    <div class="panel-body">
+                        <textarea id="text-context" class="context-textarea" placeholder="Example: A music producer's portfolio website with a dark aesthetic, neon purple accents, embedded beat player, client testimonials, and a pricing section for beat licenses. Target audience: independent hip-hop artists looking to buy beats online." maxlength="2000"></textarea>
+                        <div class="textarea-footer">
+                            <span id="char-count" class="char-count">0 / 2000</span>
+                            <div class="quick-tags">
+                                <button class="tag-btn" onclick="addTag('Dark mode with neon accents')">🌙 Dark Neon</button>
+                                <button class="tag-btn" onclick="addTag('Minimalist and clean')">💎 Minimalist</button>
+                                <button class="tag-btn" onclick="addTag('Bold and creative with animations')">🎨 Creative</button>
+                                <button class="tag-btn" onclick="addTag('Professional corporate look')">🏢 Corporate</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Theme Selector -->
+            <div class="theme-section">
+                <div class="panel-header" style="margin-bottom: 1.5rem;">
+                    <div class="panel-icon">🎨</div>
+                    <div>
+                        <h3>Select Design Theme</h3>
+                        <p class="panel-hint">Choose a design system — each encodes decades of aesthetic expertise</p>
+                    </div>
+                </div>
+                <div id="theme-grid" class="theme-grid">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <!-- Transform Button -->
+            <div class="transform-section">
+                <button id="transform-btn" class="transform-btn" onclick="startTransform()" disabled>
+                    <span class="transform-btn-content">
+                        <svg class="transform-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/></svg>
+                        <span>Transform Design</span>
+                    </span>
+                    <span class="transform-btn-loading hidden">
+                        <div class="dna-loader">
+                            <div class="dna-strand"></div>
+                            <div class="dna-strand"></div>
+                            <div class="dna-strand"></div>
+                        </div>
+                        <span>AI is redesigning...</span>
+                    </span>
+                </button>
+                <p id="transform-hint" class="transform-hint">Select a theme and provide at least text context or HTML to begin</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ OUTPUT ZONE ============ -->
+    <section id="output-zone" class="section output-zone hidden">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Result</span>
+                <h2 class="section-title">Your <span class="gradient-text">Transformed Design</span></h2>
+            </div>
+
+            <!-- Device Switcher -->
+            <div class="device-switcher">
+                <button class="device-btn active" data-device="desktop" onclick="switchDevice('desktop')">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    Desktop
+                </button>
+                <button class="device-btn" data-device="tablet" onclick="switchDevice('tablet')">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                    Tablet
+                </button>
+                <button class="device-btn" data-device="mobile" onclick="switchDevice('mobile')">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                    Mobile
+                </button>
+                <div class="device-switcher-right">
+                    <button class="device-btn" onclick="toggleFullscreen()">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+                        Fullscreen
+                    </button>
+                </div>
+            </div>
+
+            <!-- Preview / Code Split -->
+            <div class="output-split">
+                <div class="preview-container" id="preview-container">
+                    <div class="preview-frame" id="preview-frame">
+                        <iframe id="preview-iframe" sandbox="allow-scripts allow-same-origin" title="Design Preview"></iframe>
+                    </div>
+                </div>
+                <div class="resize-handle" id="resize-handle">
+                    <div class="resize-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+                <div class="code-container" id="code-container">
+                    <div class="code-tabs">
+                        <button class="code-tab active" data-lang="html" onclick="switchCodeTab('html')">HTML</button>
+                        <button class="code-tab" data-lang="css" onclick="switchCodeTab('css')">CSS</button>
+                        <button class="code-tab" data-lang="js" onclick="switchCodeTab('js')">JavaScript</button>
+                    </div>
+                    <div class="code-editor-wrapper">
+                        <pre id="code-display" class="code-display"><code id="code-content"></code></pre>
+                        <button class="copy-btn" onclick="copyCode()" title="Copy to clipboard">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                            <span>Copy</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Export Bar -->
+            <div class="export-bar">
+                <button class="btn btn-primary" onclick="downloadSingleHtml()">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Download HTML
+                </button>
+                <button class="btn btn-outline" onclick="copyFullCode()">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                    Copy All Code
+                </button>
+                <button class="btn btn-outline" onclick="openInCodePen()">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/><line x1="12" y1="22" x2="12" y2="15.5"/><polyline points="22 8.5 12 15.5 2 8.5"/><polyline points="2 15.5 12 8.5 22 15.5"/><line x1="12" y1="2" x2="12" y2="8.5"/></svg>
+                    Open in CodePen
+                </button>
+                <button class="btn btn-ghost" onclick="startOver()">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+                    Start Over
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="brand-icon">⚡</span>
+                    <span>DesignForge<span class="brand-accent">AI</span></span>
+                </div>
+                <p class="footer-text">Powered by Google Gemini AI • Built with pure HTML, CSS & JavaScript</p>
+                <p class="footer-text">© 2026 DesignForge AI. Transform anything.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ API KEY MODAL ============ -->
+    <div id="api-key-modal" class="modal-overlay hidden" onclick="closeApiKeyModal(event)">
+        <div class="modal glass-card" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h3>🔑 API Key Settings</h3>
+                <button class="btn-icon" onclick="closeApiKeyModal()">✕</button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-description" id="modal-desc-gemini">Enter your Google AI Studio API key. It's stored locally in your browser and never sent anywhere except directly to Google's API.</p>
+                <p class="modal-description hidden" id="modal-desc-openrouter">Enter your OpenRouter API key to use a variety of free AI models. It's stored locally.</p>
+                
+                <div class="input-group" style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 1.5rem;">
+                    <a href="https://aistudio.google.com/apikey" target="_blank" class="btn btn-sm btn-ghost" id="link-gemini">Get free API key from Google AI Studio →</a>
+                    <a href="https://openrouter.ai/keys" target="_blank" class="btn btn-sm btn-ghost hidden" id="link-openrouter">Get free API key from OpenRouter →</a>
+                    <div style="display:flex; align-items:center; gap:0.5rem;">
+                        <label for="provider-select" style="margin:0;">Provider:</label>
+                        <select id="provider-select" onchange="toggleProviderSettings()" style="padding: 0.3rem 0.5rem; font-size: 0.8rem; width:auto;">
+                            <option value="gemini">Google Gemini</option>
+                            <option value="openrouter">OpenRouter Free</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label id="api-key-label" for="api-key-input">Gemini API Key</label>
+                    <div class="input-with-icon">
+                        <input type="password" id="api-key-input" placeholder="AIza..." autocomplete="off">
+                        <button class="btn-icon toggle-visibility" onclick="toggleKeyVisibility()">👁️</button>
+                    </div>
+                </div>
+                
+                <div class="input-group" id="gemini-models">
+                    <label for="model-select">Model</label>
+                    <select id="model-select">
+                        <option value="gemini-2.0-flash">Gemini 2.0 Flash (Fast, Free)</option>
+                        <option value="gemini-2.5-flash">Gemini 2.5 Flash (Recommended)</option>
+                        <option value="gemini-2.5-pro">Gemini 2.5 Pro (Best Quality)</option>
+                    </select>
+                </div>
+
+                <div class="input-group hidden" id="openrouter-models">
+                    <label for="or-model-select">OpenRouter Free Model</label>
+                    <select id="or-model-select">
+                        <option value="meta-llama/llama-3.3-70b-instruct:free">Llama 3.3 70B (Free)</option>
+                        <option value="google/gemma-3-27b-it:free">Gemma 3 27B (Free)</option>
+                        <option value="qwen/qwen3-coder:free">Qwen 3 Coder (Free)</option>
+                        <option value="nvidia/nemotron-nano-12b-v2-vl:free">Nemotron 12B Vision (Free)</option>
+                        <option value="openrouter/free">OpenRouter Auto (Free)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-ghost" onclick="closeApiKeyModal()">Cancel</button>
+                <button class="btn btn-outline" onclick="testApiKeyFromModal()" id="test-key-btn">🧪 Test Key</button>
+                <button class="btn btn-primary" onclick="saveApiKey()">Save Key</button>
+            </div>
+            <div id="test-result" class="hidden" style="margin-top:1rem; padding:0.75rem; border-radius:8px; font-size:0.8rem;"></div>
+        </div>
+    </div>
+
+    <!-- ============ TOAST ============ -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="themes.js"></script>
+    <script src="ai-engine.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
